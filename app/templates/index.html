@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Review Classifier</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>E-commerce Review Classifier</h1>
+      <form id="review-form">
+        <textarea
+          id="review-text"
+          placeholder="Enter your review here..."
+          required
+        ></textarea>
+        <button type="submit">Classify</button>
+      </form>
+      <div id="result" class="hidden">
+        <h2>Classification Result:</h2>
+        <p id="sentiment"></p>
+      </div>
+    </div>
+    <script src="/static/script.js"></script>
+  </body>
+</html>

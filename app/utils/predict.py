@@ -4,7 +4,7 @@ from model.config import DEVICE, NUM_CLASSES
 from transformers import BertTokenizer
 
 model = SentimentClassifierBert(NUM_CLASSES).to(DEVICE)
-model.load_state_dict(torch.load('app/models-weight/sentiment_BERT_ecommerce-review_pytorch.pth'))
+model.load_state_dict(torch.load('app/models-weight/sentiment_BERT_ecommerce-review_pytorch.pth', map_location=DEVICE))
 model.eval()
 
 tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
